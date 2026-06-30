@@ -1,0 +1,129 @@
+body{
+    font-family: Lato, sans-serif !important;
+    box-sizing: border-box;
+}
+.cardSec {
+ min-width: 380px;
+ background: #ccc;
+ padding: 16px;
+ border-radius: 12px;
+ box-sizing: border-box;
+ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.billSection form div{
+    padding: 0 0 24px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    & label{
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.btnPrimary{
+background: orange;
+        border: 1px solid orange;
+        padding: 12px;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #212121;
+        cursor: pointer;
+        color: #fff;
+        width: auto;
+}
+.billSection{
+    background: darkkhaki;
+    padding: 24px;
+    border-radius: 12px;
+    width: 100%;
+}
+.error{
+    font-size: 12px;
+    color: darkred;
+    margin: -12px 0 0;
+}
+.GridSection{
+    display: flex;
+    gap: 48px;
+}
+.mt16{
+    margin: 16px 0 0;
+    text-align: right;
+}
+.addForm{
+    width: 100%;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    box-sizing: border-box;
+    margin: 12px 0 0;
+    & div{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        & label{
+            width: 100px;
+        }
+        & input{
+            width: 100%;
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid #757575;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+    }
+    & label{
+        font-size: 12px;
+    }
+   
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cardSec ul li:first-child{
+    border: none;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.innerSec{
+    display: flex;
+    gap: 12px;
+}
+.cardSec ul li{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    padding: 16px 0 0;
+    gap: 32px;
+    align-items: flex-start;
+    & img{
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        width: 60px;
+    }
+    & h5{
+        margin: 8px 0 8px;
+    }
+    & button{
+        background: orange;
+        padding: 4px;
+        border-radius: 8px;
+        border: 1px solid orange;
+        color: #fff;
+        font-weight: 600;
+        min-width: 90px;
+        cursor: pointer;
+    }
+}
