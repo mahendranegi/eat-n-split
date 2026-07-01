@@ -1,15 +1,53 @@
 body{
     font-family: Lato, sans-serif !important;
     box-sizing: border-box;
+    padding: 40px 60px 60px !important;
+    background: #dbdee5;
+    height: calc(100dvh - 60px - 60px);
+}
+.splitDashboard h2{
+    margin: 0;
+    padding: 0 0 12px;
+    margin: 0 0 16px;
+    position: relative;
+    font-weight: 400;
+    & em{
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #c6041f;
+        bottom: 0;
+        left: 0;
+
+    }
+}
+.GridSection{
+background: #fff;
+position: relative;
+padding: 40px;
+border-radius: 12px;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+& .logo{
+    position: absolute;
+        left: 0;
+        top: -30px;
+        margin: 0;
+}
 }
 .cardSec {
- min-width: 380px;
- background: #ccc;
- padding: 16px;
- border-radius: 12px;
+ min-width: 35%;
  box-sizing: border-box;
- box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ flex-direction: column;
+ display: flex;
+ height: calc(100dvh - 40px - 40px - 60px - 60px);
 }
+.cardSec > div:first-child{
+    overflow-x: auto;
+    flex: 1;
+    width: 100%;
+
+}
+
 .billSection form div{
     padding: 0 0 24px;
     display: flex;
@@ -21,18 +59,23 @@ body{
     }
 }
 .btnPrimary{
-background: orange;
-        border: 1px solid orange;
-        padding: 12px;
-        border-radius: 10px;
+background: #266fd5;
+        border: 1px solid #266fd5;
+        padding: 8px 10px;
+        border-radius: 4px;
         font-weight: 600;
         color: #212121;
         cursor: pointer;
         color: #fff;
         width: auto;
 }
+body .cardSec  ul li .closed{
+    background: #c6041f;
+    color: #fff;
+    border: 1px solid #c6041f;
+}
 .billSection{
-    background: darkkhaki;
+    background: #edf4fc;
     padding: 24px;
     border-radius: 12px;
     width: 100%;
@@ -52,7 +95,7 @@ background: orange;
 }
 .addForm{
     width: 100%;
-    background: #fff;
+    background: #edf4fc;
     padding: 16px;
     border-radius: 12px;
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -86,17 +129,12 @@ ul{
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 .cardSec ul li:first-child{
     border: none;
 }
-.red{
-    color: red;
-}
-.green{
-    color: green;
-}
+
 .innerSec{
     display: flex;
     gap: 12px;
@@ -105,9 +143,22 @@ ul{
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #fff;
-    padding: 16px 0 0;
     gap: 32px;
-    align-items: flex-start;
+    background: #edf4fc;
+    border-radius: 12px;
+    padding: 12px 12px 12px 20px;
+        border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+    align-items: center;
+    & em{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: #266fd5;
+    }
     & img{
         border-radius: 12px;
         border: 1px solid #ccc;
@@ -115,14 +166,27 @@ ul{
     }
     & h5{
         margin: 8px 0 8px;
-    }
-    & button{
-        background: orange;
-        padding: 4px;
-        border-radius: 8px;
-        border: 1px solid orange;
-        color: #fff;
         font-weight: 600;
+        color: #212121;
+        text-transform: uppercase;
+    }
+    & span{
+        font-size: 12px;
+        color: #757575;
+    }
+    .red{
+    color: red;
+}
+.green{
+    color: green;
+}
+    & button{
+        background: #266fd5;
+        padding: 6px 4px;
+        border-radius: 4px;
+        border: 1px solid #266fd5;
+        color: #fff;
+        font-weight: 700;
         min-width: 90px;
         cursor: pointer;
     }
