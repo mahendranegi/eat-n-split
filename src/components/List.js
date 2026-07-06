@@ -44,7 +44,7 @@ function List({onSelect,friends,setFriends,modalHide,selectedFriend,handleSelect
                 </div>
                 {/* <button className='btnPrimary' onClick={()=> onSelect(elem)}>{selectedFriend?.id === elem.id ? 'Closed' : 'Select'}</button> */}
                 {selectedFriend?.id === elem.id ?<button className='btnPrimary closed' onClick={()=> handleSelectClosed(elem)}>Closed</button> : <button className='btnPrimary' onClick={()=> onSelect(elem)}>Select</button> }
-<em></em>
+            <em></em>
             </li>
         })}
         

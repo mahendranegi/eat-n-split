@@ -1,25 +1,25 @@
 export const data = [
     {
         id: 1,
-        name: 'Ankit',
+        name: 'John',
         balance: -7,
         image: 'https://ws.oneassist.in/static/portal_v2/images/portal_v3/affinity-partner/doctor.svg'
     },
      {
         id: 2,
-        name: 'Manish',
+        name: 'Alex',
         balance: 20,
         image: 'https://ws.oneassist.in/static/portal_v2/images/portal_v3/affinity-partner/doctor.svg'
     },
     {
         id: 3,
-        name: 'Alex',
+        name: 'Bob',
         balance: 0,
         image: 'https://ws.oneassist.in/static/portal_v2/images/portal_v3/affinity-partner/doctor.svg'
     },
     {
         id: 4,
-        name: 'Vicky',
+        name: 'Ashif',
         balance: -20,
         image: 'https://ws.oneassist.in/static/portal_v2/images/portal_v3/affinity-partner/doctor.svg'
     },
