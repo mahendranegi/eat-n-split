@@ -83,7 +83,7 @@ body .cardSec  ul li .closed{
 .error{
     font-size: 12px;
     color: darkred;
-    margin: -12px 0 0;
+    margin: 2px 0 10px;
 }
 .GridSection{
     display: flex;

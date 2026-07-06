@@ -1,53 +1,69 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function FormAddFriend({setFriends,friends,handleClosed,forFormData,setForFormData}) {
-    console.log(friends,'newdatanewdatanewdata')
-    const[name,setName] = useState('');
-     const[imgUrl,setImgUrl] = useState('https://i.pravatar.cc/48');
-     const[addData,setAddData] = useState([]);
-     const[error,setError] = useState('');
-     const[showAddFriend,setShowAddFriend] = useState([]);
-     const handleAddFriend = () =>{
-        if(!name){
-            setError("d");
-            setName('')
-            return
-        }
-        else{
-            const id = crypto.randomUUID();
-            const newFriend = {
-                name, 
-                image: `${imgUrl}?=${id}`,
-                balance: 1,
-                id,                
-            };
-            console.log(newFriend,'checking')
-            console.log(friends,'bbbbbbbbbbbbb________________-')
-            setFriends([...friends,newFriend])
-            setName('');   
-            handleClosed()   
-        }        
-     }
+function FormAddFriend({ setFriends, handleClosed }) {
+  const [name, setName] = useState("");
+  const [imgUrl, setImgUrl] = useState("https://i.pravatar.cc/48");
+  const [error, setError] = useState("");
+
+  const handleAddFriend = (e) => {
+    e.preventDefault();
+
+    if (!name.trim()) {
+      setError("Please enter a friend name.");
+      return;
+    }
+
+    const id = crypto.randomUUID();
+
+    const newFriend = {
+      id,
+      name,
+      image: `${imgUrl}?u=${id}`,
+      balance: 0,
+    };
+
+    setFriends((prevFriends) => [...prevFriends, newFriend]);
+
+    setName("");
+    setImgUrl("https://i.pravatar.cc/48");
+    setError("");
+
+    handleClosed();
+  };
 
   return (
-    <>
-
-    {forFormData && (<section className='addForm'>
+    <section className="addForm">
+      <form onSubmit={handleAddFriend}>
         <div>
-            <form>
-            <label>Add Friend Name</label>
-            <input placeholder='enter name' value={name} onChange={(e)=>{setName(e.target.value)}}/>
-            </form>
-            {error ? <p className='error'>Please Enter Name</p> : ''}
-            <div>
-            <label>Image url</label>
-            <input placeholder='enter url here' value={imgUrl} onChange={(e)=>setImgUrl(e.target.value)}/>
-            </div>            
-            <button className='btnPrimary' onClick={handleAddFriend}>Submit</button>
+          <label>Friend Name</label>
+          <input
+            type="text"
+            placeholder="Enter friend name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+              setError("");
+            }}
+          />
         </div>
-    </section>)}
-    </>
-  )
+
+        {error && <p className="error">{error}</p>}
+
+        <div>
+          <label>Image URL</label>
+          <input
+            type="text"
+            value={imgUrl}
+            onChange={(e) => setImgUrl(e.target.value)}
+          />
+        </div>
+
+        <button type="submit" className="btnPrimary">
+          Add Friend
+        </button>
+      </form>
+    </section>
+  );
 }
 
-export default FormAddFriend
+export default FormAddFriend;
